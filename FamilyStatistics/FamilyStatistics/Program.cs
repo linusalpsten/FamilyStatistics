@@ -19,6 +19,7 @@ namespace FamilyStatistics
         const RelationType defaultRelation = RelationType.Default;
         static void Main(string[] args)
         {
+            AddFamily();
             ShowFamily();
         }
 
@@ -67,6 +68,29 @@ namespace FamilyStatistics
                 Console.WriteLine(item);
             }
             Console.WriteLine();
+        }
+
+        public static void AddFamily()
+        {
+            bool addingFamily = true;
+            while (addingFamily)
+            {
+                string name = GetName();
+                names.AddName(name);
+                ages.AddAge(GetAge(name));
+                heights.AddHeight(GetHeight(name));
+                relations.AddRelation(GetRelation(name));
+                string input = string.Empty;
+                do
+                {
+                    Console.WriteLine("Do you want to add another family member? Yes/No");
+                    input = Console.ReadLine();
+                } while (input.ToLower() != "yes" && input.ToLower() != "no");
+                if (input.ToLower() == "no")
+                {
+                    addingFamily = false;
+                }
+            }
         }
 
         public static string GetName()
