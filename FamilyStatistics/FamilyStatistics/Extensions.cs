@@ -10,6 +10,10 @@ namespace FamilyStatistics
     {
         public static void Add(this string[] array, string addition)
         {
+            if (addition == string.Empty)
+            {
+                throw new ArgumentException("Your family member needs to have a name");
+            }
             int firstUsableIndex = -1;
             for (int i = 0; i < array.Length; i++)
             {
