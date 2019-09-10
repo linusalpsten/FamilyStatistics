@@ -19,6 +19,52 @@ namespace FamilyStatistics
         const RelationType defaultRelation = RelationType.Default;
         static void Main(string[] args)
         {
+        public static void ShowFamily()
+        {
+            Console.WriteLine("Names:");
+            foreach (var item in names)
+            {
+                if (item == defaultName)
+                {
+                    break;
+                }
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Ages:");
+            foreach (var item in ages)
+            {
+                if (item == defautAge)
+                {
+                    break;
+                }
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Heigts:");
+            foreach (var item in heights)
+            {
+                if (item == defaultHeight)
+                {
+                    break;
+                }
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Relations:");
+            foreach (var item in relations)
+            {
+                if (item == defaultRelation)
+                {
+                    break;
+                }
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+        }
 
         }
     }
