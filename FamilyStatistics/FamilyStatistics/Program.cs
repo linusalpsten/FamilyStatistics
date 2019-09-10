@@ -123,7 +123,6 @@ namespace FamilyStatistics
                 }
                 if (relation == RelationType.Default)
                 {
-                    Console.WriteLine($"{name} must be atleast 1 year old.");
                 }
             } while (relation == RelationType.Default);
             return relation;
