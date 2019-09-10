@@ -19,6 +19,9 @@ namespace FamilyStatistics
         const RelationType defaultRelation = RelationType.Default;
         static void Main(string[] args)
         {
+            ShowFamily();
+        }
+
         public static void ShowFamily()
         {
             Console.WriteLine("Names:");
