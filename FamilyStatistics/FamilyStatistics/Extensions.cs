@@ -55,6 +55,14 @@ namespace FamilyStatistics
 
         public static string Capitalize(this string self)
         {
+            if (self == null)
+            {
+                return self;
+            }
+            if (self.Length == 0)
+            {
+                return "";
+            }
             return self[0].ToString().ToUpper() + self.Substring(1);
         }
     }
