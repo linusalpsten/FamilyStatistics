@@ -66,6 +66,20 @@ namespace FamilyStatistics
             Console.WriteLine();
         }
 
+        public static string GetName()
+        {
+            Console.WriteLine("Write a name of a family member");
+            string name = string.Empty;
+            do
+            {
+                name = Console.ReadLine().Capitalize();
+                if (name == string.Empty)
+                {
+                    Console.WriteLine("Your family member has to have a name, try again.");
+                }
+            } while (name == string.Empty);
+            return name;
+        }
         }
     }
 }
