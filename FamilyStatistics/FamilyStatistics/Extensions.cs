@@ -10,19 +10,15 @@ namespace FamilyStatistics
     {
         public static void AddTo<T>(this T addition, ref T[] array) where T : IComparable
         {
-            if (isDefault<T>(addition))
+            if (isDefault(addition))
             {
                 throw new ArgumentException($"Addition can not be equal to the default value of {typeof(T)}");
             }
 
             int firstUsableIndex = -1;
-            if (addition == null)
-            {
-
-            }
             for (int i = 0; i < array.Length; i++)
             {
-                if (isDefault<T>(array[i]))
+                if (isDefault(array[i]))
                 {
                     firstUsableIndex = i;
                     break;
