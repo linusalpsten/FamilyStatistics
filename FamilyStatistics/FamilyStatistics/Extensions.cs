@@ -95,5 +95,10 @@ namespace FamilyStatistics
             }
             array[firstUsableIndex] = addition;
         }
+
+        public static string Capitalize(this string self)
+        {
+            return self[0].ToString().ToUpper() + self.Substring(1);
+        }
     }
 }
