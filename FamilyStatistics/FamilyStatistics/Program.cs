@@ -113,5 +113,37 @@ namespace FamilyStatistics
             return height;
         }
         }
+        public static RelationType GetRelation(string name)
+        {
+            Console.WriteLine($"What is your relation with {name}?");
+            RelationType[] relationTypes = (RelationType[])Enum.GetValues(typeof(RelationType));
+            relationTypes = relationTypes.Skip(1).ToArray();
+            foreach (RelationType type in relationTypes)
+            {
+                if (!(type == RelationType.Default))
+                {
+                    Console.Write($"{type}, ");
+                }
+            }
+            Console.WriteLine();
+            RelationType relation = RelationType.Default;
+            string input = string.Empty;
+            do
+            {
+                input = Console.ReadLine().Capitalize();
+                foreach (RelationType item in relationTypes)
+                {
+                    if (item.ToString() == input)
+                    {
+                        relation = item;
+                    }
+                }
+                if (relation == RelationType.Default)
+                {
+                    Console.WriteLine($"{name} must be atleast 1 year old.");
+                }
+            } while (relation == RelationType.Default);
+            return relation;
+         }
     }
 }
