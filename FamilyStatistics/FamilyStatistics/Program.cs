@@ -8,9 +8,9 @@ namespace FamilyStatistics
 {
     class Program
     {
-        static string[] names = new string[128];
-        static int[] ages = new int[128];
-        static double[] heights = new double[128];
+        static string[] names = new string[1];
+        static int[] ages = new int[1];
+        static double[] heights = new double[1];
         static RelationType[] relations = new RelationType[8];
 
         const string defaultName = null;
