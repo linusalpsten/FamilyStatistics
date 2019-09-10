@@ -11,6 +11,7 @@ namespace FamilyStatistics
         static void Main(string[] args)
         {
             Console.WriteLine("this is a test");
+            Console.WriteLine("Inte samma sak");
         }
     }
 }
