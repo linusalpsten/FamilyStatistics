@@ -74,7 +74,7 @@ namespace FamilyStatistics
             array[firstUsableIndex] = addition;
         }
 
-        public static void AddRelationType(this RelationType[] array, RelationType addition)
+        public static void AddRelation(this RelationType[] array, RelationType addition)
         {
             if (addition <= RelationType.Default)
             {
