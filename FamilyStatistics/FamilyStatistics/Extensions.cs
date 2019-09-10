@@ -8,7 +8,7 @@ namespace FamilyStatistics
 {
     public static class Extensions
     {
-        public static void Add(this string[] array, string addition)
+        public static void AddName(this string[] array, string addition)
         {
             if (addition == string.Empty)
             {
@@ -30,7 +30,7 @@ namespace FamilyStatistics
             array[firstUsableIndex] = addition;
         }
 
-        public static void Add(this int[] array, int addition)
+        public static void AddAge(this int[] array, int addition)
         {
             if (addition <= 0)
             {
@@ -52,7 +52,7 @@ namespace FamilyStatistics
             array[firstUsableIndex] = addition;
         }
 
-        public static void Add(this double[] array, double addition)
+        public static void AddHeight(this double[] array, double addition)
         {
             if (addition <= 0)
             {
@@ -74,7 +74,7 @@ namespace FamilyStatistics
             array[firstUsableIndex] = addition;
         }
 
-        public static void Add(this RelationType[] array, RelationType addition)
+        public static void AddRelationType(this RelationType[] array, RelationType addition)
         {
             if (addition <= RelationType.Default)
             {
