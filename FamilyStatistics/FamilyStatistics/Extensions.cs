@@ -20,7 +20,7 @@ namespace FamilyStatistics
             {
 
             }
-            for (int i = 0; i < array.Count(); i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 if (isDefault<T>(array[i]))
                 {
@@ -30,9 +30,9 @@ namespace FamilyStatistics
             }
             if (firstUsableIndex == -1)
             {
-                firstUsableIndex = array.Count();
-                T[] extendedArray = new T[array.Count() * 2];
-                for (int i = 0; i < array.Count(); i++)
+                firstUsableIndex = array.Length;
+                T[] extendedArray = new T[array.Length * 2];
+                for (int i = 0; i < array.Length; i++)
                 {
                     extendedArray[i] = array[i];
                 }
