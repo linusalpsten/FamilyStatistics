@@ -25,49 +25,10 @@ namespace FamilyStatistics
 
         public static void ShowFamily()
         {
-            Console.WriteLine("Names:");
-            foreach (var item in names)
+            for (int i = 0; i < names.Length; i++)
             {
-                if (item == defaultName)
-                {
-                    break;
-                }
-                Console.WriteLine(item);
+                Console.WriteLine($"Name: {names[i]}, Age: {ages[i]}, Height: {heights[i]}, Relation: {relations[i]}");
             }
-            Console.WriteLine();
-
-            Console.WriteLine("Ages:");
-            foreach (var item in ages)
-            {
-                if (item == defautAge)
-                {
-                    break;
-                }
-                Console.WriteLine(item);
-            }
-            Console.WriteLine();
-
-            Console.WriteLine("Heigts:");
-            foreach (var item in heights)
-            {
-                if (item == defaultHeight)
-                {
-                    break;
-                }
-                Console.WriteLine(item);
-            }
-            Console.WriteLine();
-
-            Console.WriteLine("Relations:");
-            foreach (var item in relations)
-            {
-                if (item == defaultRelation)
-                {
-                    break;
-                }
-                Console.WriteLine(item);
-            }
-            Console.WriteLine();
         }
 
         public static void AddFamily()
