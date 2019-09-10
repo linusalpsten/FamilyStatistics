@@ -10,6 +10,7 @@ namespace FamilyStatistics
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Inte samma sak");
         }
     }
 }
