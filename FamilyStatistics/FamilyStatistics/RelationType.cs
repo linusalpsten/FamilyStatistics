@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FamilyStatistics
 {
-    enum RelationType
+    public enum RelationType
     {
-        Parent, Sibling, Cousin, Grandmother, Grandfather, Aunt, Uncle
+        Default, Parent, Sibling, Cousin, Grandmother, Grandfather, Aunt, Uncle
     }
 }
