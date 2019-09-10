@@ -8,16 +8,21 @@ namespace FamilyStatistics
 {
     public static class Extensions
     {
-        public static void AddName(this string[] array, string addition)
+        public static void AddTo<T>(this T addition, ref T[] array) where T : IComparable
         {
-            if (addition == string.Empty)
+            if (isDefault<T>(addition))
             {
-                throw new ArgumentException("Your family member needs to have a name");
+                throw new ArgumentException($"Addition can not be equal to the default value of {typeof(T)}");
             }
+
             int firstUsableIndex = -1;
-            for (int i = 0; i < array.Length; i++)
+            if (addition == null)
             {
-                if (array[i] == null)
+
+            }
+            for (int i = 0; i < array.Count(); i++)
+            {
+                if (isDefault<T>(array[i]))
                 {
                     firstUsableIndex = i;
                     break;
@@ -25,75 +30,27 @@ namespace FamilyStatistics
             }
             if (firstUsableIndex == -1)
             {
-                throw new IndexOutOfRangeException("Your family is not this big");
+                firstUsableIndex = array.Count();
+                T[] extendedArray = new T[array.Count() * 2];
+                for (int i = 0; i < array.Count(); i++)
+                {
+                    extendedArray[i] = array[i];
+                }
+                array = extendedArray;
             }
             array[firstUsableIndex] = addition;
         }
-
-        public static void AddAge(this int[] array, int addition)
+        public static bool isDefault<T>(T item) where T : IComparable
         {
-            if (addition <= 0)
+            if (item == null)
             {
-                throw new ArgumentException("Age can not be 0 or less");
+                return true;
             }
-            int firstUsableIndex = -1;
-            for (int i = 0; i < array.Length; i++)
+            if (item.CompareTo(default(T)) == 0)
             {
-                if (array[i] == 0)
-                {
-                    firstUsableIndex = i;
-                    break;
-                }
+                return true;
             }
-            if (firstUsableIndex == -1)
-            {
-                throw new IndexOutOfRangeException("Your family is not this big");
-            }
-            array[firstUsableIndex] = addition;
-        }
-
-        public static void AddHeight(this double[] array, double addition)
-        {
-            if (addition <= 0)
-            {
-                throw new ArgumentException("Height can not be 0 or less");
-            }
-            int firstUsableIndex = -1;
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] == 0)
-                {
-                    firstUsableIndex = i;
-                    break;
-                }
-            }
-            if (firstUsableIndex == -1)
-            {
-                throw new IndexOutOfRangeException("Your family is not this big");
-            }
-            array[firstUsableIndex] = addition;
-        }
-
-        public static void AddRelation(this RelationType[] array, RelationType addition)
-        {
-            if (addition <= RelationType.Default)
-            {
-                throw new ArgumentException("You need to have a relation with this family member");
-            }
-            int firstUsableIndex = -1;
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] == 0)
-                {
-                    firstUsableIndex = i;
-                    break;
-                }
-            }
-            if (firstUsableIndex == -1)
-            {
-                throw new IndexOutOfRangeException("Your family is not this big");
-            }
-            array[firstUsableIndex] = addition;
+            return false;
         }
 
         public static string Capitalize(this string self)

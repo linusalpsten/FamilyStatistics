@@ -76,10 +76,10 @@ namespace FamilyStatistics
             while (addingFamily)
             {
                 string name = GetName();
-                names.AddName(name);
-                ages.AddAge(GetAge(name));
-                heights.AddHeight(GetHeight(name));
-                relations.AddRelation(GetRelation(name));
+                name.AddTo(ref names);
+                GetAge(name).AddTo(ref ages);
+                GetHeight(name).AddTo(ref heights);
+                GetRelation(name).AddTo(ref relations);
                 string input = string.Empty;
                 do
                 {
