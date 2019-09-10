@@ -10,3 +10,8 @@ FamilyStatistics/FamilyStatistics/obj/Debug/FamilyStatistics.csproj.CoreCompileI
 FamilyStatistics/FamilyStatistics/obj/Debug/FamilyStatistics.csprojAssemblyReference.cache
 FamilyStatistics/FamilyStatistics/.vs/FamilyStatistics/v16/Server/sqlite3/storage.ide
 FamilyStatistics/FamilyStatistics/.vs/FamilyStatistics/v16/Server/sqlite3/db.lock
+FamilyStatistics/FamilyStatistics/bin/Debug/FamilyStatistics.pdb
+*.exe
+FamilyStatistics/FamilyStatistics/bin/Debug/FamilyStatistics.exe.config
+FamilyStatistics/FamilyStatistics/obj/Debug/FamilyStatistics.csproj.FileListAbsolute.txt
+FamilyStatistics/FamilyStatistics/obj/Debug/FamilyStatistics.pdb
