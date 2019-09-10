@@ -107,6 +107,7 @@ namespace FamilyStatistics
             } while (name == string.Empty);
             return name;
         }
+
         public static int GetAge(string name)
         {
             Console.WriteLine($"How old is {name} (in years)?");
@@ -121,6 +122,7 @@ namespace FamilyStatistics
             } while (age <= 0);
             return age;
         }
+
         public static double GetHeight(string name)
         {
             Console.WriteLine($"How tall is {name} (in meters)?");
@@ -136,7 +138,7 @@ namespace FamilyStatistics
             } while (height <= 0);
             return height;
         }
-        }
+
         public static RelationType GetRelation(string name)
         {
             Console.WriteLine($"What is your relation with {name}?");
@@ -168,6 +170,6 @@ namespace FamilyStatistics
                 }
             } while (relation == RelationType.Default);
             return relation;
-         }
+        }
     }
 }
