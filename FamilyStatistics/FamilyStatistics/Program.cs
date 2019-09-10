@@ -94,6 +94,21 @@ namespace FamilyStatistics
             } while (age <= 0);
             return age;
         }
+        public static double GetHeight(string name)
+        {
+            Console.WriteLine($"How tall is {name} (in meters)?");
+            double height = 0;
+            do
+            {
+                string heightInput = Console.ReadLine().Replace('.', ',');
+                double.TryParse(heightInput, out height);
+                if (height <= 0)
+                {
+                    Console.WriteLine($"{name} can not be 0 meters or less tall.");
+                }
+            } while (height <= 0);
+            return height;
+        }
         }
     }
 }
