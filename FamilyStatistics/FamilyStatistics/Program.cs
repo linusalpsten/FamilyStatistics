@@ -80,6 +80,20 @@ namespace FamilyStatistics
             } while (name == string.Empty);
             return name;
         }
+        public static int GetAge(string name)
+        {
+            Console.WriteLine($"How old is {name} (in years)?");
+            int age = 0;
+            do
+            {
+                int.TryParse(Console.ReadLine(), out age);
+                if (age <= 0)
+                {
+                    Console.WriteLine($"{name} must be atleast 1 year old.");
+                }
+            } while (age <= 0);
+            return age;
+        }
         }
     }
 }
