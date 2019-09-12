@@ -26,6 +26,7 @@ namespace FamilyStatistics
                 Console.WriteLine($"Name: {names[i]}, Age: {ages[i]}, Height: {heights[i]}, Relation: {relations[i]}");
             }
             AgeFacts();
+            HeightFacts();
         }
 
         public static void AddFamily()
@@ -153,5 +154,20 @@ namespace FamilyStatistics
                 Console.WriteLine("Your family actually has the same average age as the Swedish population");
         }
 
+        public static void HeightFacts()
+        {
+            double totalHeight = 0;
+            foreach (var item in heights)
+            {
+                totalHeight += item;
+            }     
+            
+            Console.WriteLine($"\nYour familys total height is: {totalHeight} meters");
+            int erthEquator = 40075000;
+            double timesAround = erthEquator / totalHeight;
+          
+            Console.WriteLine($"If we want to cover the Erth's equator with your family members." +
+                $" We need to lay them down { Math.Round(timesAround, 1)} times");        
+        }
     }
 }
