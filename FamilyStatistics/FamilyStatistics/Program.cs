@@ -25,6 +25,7 @@ namespace FamilyStatistics
             {
                 Console.WriteLine($"Name: {names[i]}, Age: {ages[i]}, Height: {heights[i]}, Relation: {relations[i]}");
             }
+            AgeFacts();
         }
 
         public static void AddFamily()
@@ -128,5 +129,29 @@ namespace FamilyStatistics
             } while (relation == RelationType.Default);
             return relation;
         }
+
+        public static void AgeFacts()
+        {
+            double averageAge = 0;
+            foreach (var item in ages)
+            {
+                averageAge += item;
+            }           
+            averageAge /= ages.Length;
+            Console.WriteLine($"\nYour familys average age is; {averageAge}");
+
+            double averageAgeInSwe = 40.8;
+            double ageBetween = averageAge - averageAgeInSwe;
+
+            if (ageBetween <0)            
+                Console.WriteLine($"Your familys average age is { Math.Abs(ageBetween)} years younger then the average of " +
+                    "the Swedish populaion");
+            else if (ageBetween > 0)
+                Console.WriteLine($"Your familys average age is {ageBetween} years older then the average of the Swedish populaion");
+            //This else is not needed. Because ageBetween can never be == 0
+            else
+                Console.WriteLine("Your family actually has the same average age as the Swedish population");
+        }
+
     }
 }
