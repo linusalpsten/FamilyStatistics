@@ -11,7 +11,7 @@ namespace FamilyStatistics
         static string[] names = new string[1];
         static int[] ages = new int[1];
         static double[] heights = new double[1];
-        static RelationType[] relations = new RelationType[8];
+        static RelationType[] relations = new RelationType[9];
 
         static void Main(string[] args)
         {
