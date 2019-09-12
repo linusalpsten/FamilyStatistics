@@ -16,11 +16,12 @@ namespace FamilyStatistics
         static void Main(string[] args)
         {
             AddFamily();
-            ShowFamily();
+            ShowFamily();         
         }
 
         public static void ShowFamily()
         {
+            Console.WriteLine("Here are your family members one by one");
             for (int i = 0; i < names.Length; i++)
             {
                 Console.WriteLine($"Name: {names[i]}, Age: {ages[i]}, Height: {heights[i]}, Relation: {relations[i]}");
@@ -49,6 +50,7 @@ namespace FamilyStatistics
                 {
                     addingFamily = false;
                 }
+                Console.Clear();
             }
         }
 
