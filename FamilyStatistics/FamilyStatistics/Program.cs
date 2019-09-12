@@ -123,7 +123,7 @@ namespace FamilyStatistics
                 }
                 if (relation == RelationType.Default)
                 {
-                    Console.WriteLine("Write one of our options");
+                    Console.WriteLine("Write one of our options, try again!");
                 }
             } while (relation == RelationType.Default);
             return relation;
