@@ -17,8 +17,8 @@ namespace FamilyStatistics
         {
             AddFamily();
             ShowFamily();
-            AgeFacts();
-            HeightFacts();
+            ShowAgeStatistics();
+            ShowHeightStatistics();
         }
 
         public static void ShowFamily()
@@ -133,7 +133,7 @@ namespace FamilyStatistics
             return relation;
         }
 
-        public static void AgeFacts()
+        public static void ShowAgeStatistics()
         {
             double averageAge = 0;
             foreach (var item in ages)
@@ -156,7 +156,7 @@ namespace FamilyStatistics
                 Console.WriteLine("Your family actually has the same average age as the Swedish population");
         }
 
-        public static void HeightFacts()
+        public static void ShowHeightStatistics()
         {
             double totalHeight = 0;
             foreach (var item in heights)
