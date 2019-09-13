@@ -78,7 +78,7 @@ namespace FamilyStatistics
                 int.TryParse(Console.ReadLine(), out age);
                 if (age <= 0)
                 {
-                    Console.WriteLine($"{name} must be atleast 1 year old.");
+                    Console.WriteLine($"{name} must be atleast 1 year old, try again.");
                 }
             } while (age <= 0);
             return age;
@@ -94,7 +94,7 @@ namespace FamilyStatistics
                 double.TryParse(heightInput, out height);
                 if (height <= 0)
                 {
-                    Console.WriteLine($"{name} can not be 0 meters or less tall.");
+                    Console.WriteLine($"{name} can not be 0 meters or less tall, try again.");
                 }
             } while (height <= 0);
             return height;
@@ -127,7 +127,7 @@ namespace FamilyStatistics
                 }
                 if (relation == RelationType.Default)
                 {
-                    Console.WriteLine("Write one of our options, try again!");
+                    Console.WriteLine("Write one of our options, try again.");
                 }
             } while (relation == RelationType.Default);
             return relation;
