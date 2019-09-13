@@ -8,6 +8,6 @@ namespace FamilyStatistics
 {
     public enum RelationType
     {
-        Default=0, Partner, Parent, Sibling, Cousin, Grandmother, Grandfather, Aunt, Uncle,  Other
+        Default=0, Partner, Parent, Sibling, Cousin, Grandmother, Grandfather, Aunt, Uncle, Other
     }
 }
