@@ -11,12 +11,14 @@ namespace FamilyStatistics
         static string[] names = new string[1];
         static int[] ages = new int[1];
         static double[] heights = new double[1];
-        static RelationType[] relations = new RelationType[9];
+        static RelationType[] relations = new RelationType[1];
 
         static void Main(string[] args)
         {
             AddFamily();
-            ShowFamily();         
+            ShowFamily();
+            AgeFacts();
+            HeightFacts();
         }
 
         public static void ShowFamily()
@@ -26,8 +28,6 @@ namespace FamilyStatistics
             {
                 Console.WriteLine($"Name: {names[i]}, Age: {ages[i]}, Height: {heights[i]}, Relation: {relations[i]}");
             }
-            AgeFacts();
-            HeightFacts();
         }
 
         public static void AddFamily()
