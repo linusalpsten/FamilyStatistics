@@ -91,7 +91,7 @@ namespace FamilyStatistics
             Console.WriteLine("Here are your family members one by one");
             for (int i = 0; i < names.Length; i++)
             {
-                if (Extensions.isDefault(names[i]))
+                if (names[i].isDefault())
                 {
                     break;
                 }
